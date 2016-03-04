@@ -3,7 +3,14 @@ $icon-font-path:        "../fonts/";
 
 // Grid settings
 $main-sm-columns:       12;
-$sidebar-sm-columns:    4;
+$sidebar-sm-columns:    12;
+$main-md-columns:       12;
+$sidebar-md-columns:    5;
 
 // Colors
-$brand-primary:         #27ae60;
+$brand-primary:         #aa170c;
+$brand-secondary:		#dc8f32;
+
+$font-stack: 'Neuton', serif;
+$font-header: 'Montserrat', sans-serif;
+$global-color: #007A53;

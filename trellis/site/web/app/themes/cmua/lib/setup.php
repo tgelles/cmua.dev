@@ -44,6 +44,10 @@ function setup() {
   // http://codex.wordpress.org/Function_Reference/add_theme_support#HTML5
   add_theme_support('html5', ['caption', 'comment-form', 'comment-list', 'gallery', 'search-form']);
 
+  // Enable SportsPress custom theme files
+  //http://support.themeboy.com/article/58-theme-integration-guide
+   add_theme_support( 'sportspress' );
+
   // Use main stylesheet for visual editor
   // To add custom styles edit /assets/styles/layouts/_tinymce.scss
   add_editor_style(Assets\asset_path('styles/main.css'));
@@ -84,7 +88,7 @@ function display_sidebar() {
     // The sidebar will NOT be displayed if ANY of the following return true.
     // @link https://codex.wordpress.org/Conditional_Tags
     is_404(),
-    is_front_page(),
+    //is_front_page(),
     is_page_template('template-custom.php'),
   ]);
 
