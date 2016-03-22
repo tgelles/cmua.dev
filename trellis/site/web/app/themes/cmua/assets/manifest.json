@@ -12,6 +12,12 @@
       ],
       "main": true
     },
+    "backstretch.js": {
+      "files": [
+        "scripts/jquery.backstretch.min.js"
+      ],
+      "main": true
+    },
     "customizer.js": {
       "files": [
         "scripts/customizer.js"

@@ -18,28 +18,45 @@ use Roots\Sage\Wrapper;
       do_action('get_header');
       get_template_part('templates/header');
     ?>
+
+
+
     <?php if (is_front_page()) : ?>      
-      <section class="intro-header" style="background-image: url('<?php echo get_template_directory_uri() ?>/assets/images/header.jpg')">
+      <header class="intro-header" style="background-image: url('/app/themes/cmua/dist/images/slider4.jpg'); background-position-y: 25%;">
+    <?php else :?>
+      <header class="intro-header" style="background-image: url('/app/themes/cmua/dist/images/slider5.jpg');">
+    <?php endif; ?>           
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="post-heading">
+                    <?php if (is_front_page()) : ?> 
+                      <div class="site-heading">
+                    <?php else :?>
+                      <div class="site-heading interior">
+                  <?php endif; ?>
                         <h1>Central Maryland Ultimate Association</h1>
+                        <hr class="small">
                     </div>
                 </div>
             </div>
         </div>
-      </section>
-    <?php endif; ?>
-    <div class="wrap container" role="document">
-      <div class="content row <?php if ( ! is_front_page() ): ?> margin-top-4<?php else:?> margin-top-2<?php endif; ?>">
+    </header>
+    <?php if (is_front_page()) : ?> 
+      <section class="container" >
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          <p class="lead text-center">The mission of CMUA is to promote the growth and development of the sport of ultimate in the Baltimore metropolitan area by offering mixed, open, and women’s recreation leagues and tournaments, and by supporting local teams at the youth, college, and club levels.</p>   
+          <hr>     
+        </div>
+      </section> 
+    <?php endif;?>
+   
+    <div class="wrap container margin-bottom-2" role="document">
+      <div class="content row ">
         <main class="main">
-          <?php if (is_front_page() ): ?> 
-          <?php endif; ?>
           <?php include Wrapper\template_path(); ?>
         </main><!-- /.main -->
         <?php if (Setup\display_sidebar()) : ?>
-          <aside class="sidebar">
+          <aside class="sidebar margin-top-2">
             <?php include Wrapper\sidebar_path(); ?>
           </aside><!-- /.sidebar -->
         <?php endif; ?>

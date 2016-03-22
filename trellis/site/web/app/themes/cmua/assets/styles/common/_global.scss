@@ -3,6 +3,7 @@ body {
   font-weight: 300;
   font-style: normal;
   font-size: 2rem;
+  color: $black;
 }
 
 h1, h2, h3, h4, h5, h6 { 
@@ -27,3 +28,27 @@ h1, h2, h3, h4, h5, h6 {
 .home .main {
    padding: 0;
 }
+
+.main {
+  p, .sp-table-wrapper  {
+    padding-right: 35px;
+  }
+}
+
+ul.nav li.dropdown:hover ul.dropdown-menu { 
+display: block !important; 
+}
+
+.sidebar {
+  background:  #FBD872;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.frm_forms {
+    background: #e7e7e7;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.frm_ajax_loading{visibility:hidden;}

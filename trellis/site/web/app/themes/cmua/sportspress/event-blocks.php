@@ -23,7 +23,7 @@ $defaults = array(
 	'link_events' => 0,
 	'paginated' => 0,
 	'rows' => '10',
-	'order' => 'default',
+	'order' => 'ASC',
 	'show_all_events_link' => 0,
 	'show_title' => true,
 	'show_league' => true,
@@ -68,7 +68,6 @@ if ( $title )
 ?>
 <div class="sp-template sp-template-event-blocks">
 	<div class="sp-table-wrapper">
-	<h3>This Week's Games</h3>
 	<ul class="list-group">
 				<?php
 				$i = 0;
@@ -104,10 +103,10 @@ if ( $title )
 								<?php echo sp_add_link( $event->post_title, $permalink, $link_events ); ?>
 							</h4>
 							<?php echo implode( $logos, ' ' ); ?>
-						
+
 							<h5 class="sp-event-results">
 								<time class="sp-event-date" datetime="<?php echo $event->post_date; ?>">
-									<?php echo get_the_time( get_option( 'date_format' ), $event ); ?> | 
+									<?php echo get_the_time( get_option( 'date_format' ), $event ); ?> |
 								<?php if ( ! empty( $main_results ) ): ?>
 									<span class="sp-result"><?php echo implode( $main_results, ' - ' ); ?></span>
 								<?php else: ?>
@@ -125,7 +124,7 @@ if ( $title )
 
 
 						</li>
-					
+
 					<?php
 					$i++;
 				endforeach;

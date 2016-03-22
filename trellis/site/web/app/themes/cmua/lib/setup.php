@@ -46,7 +46,7 @@ function setup() {
 
   // Enable SportsPress custom theme files
   //http://support.themeboy.com/article/58-theme-integration-guide
-   add_theme_support( 'sportspress' );
+  add_theme_support( 'sportspress' );
 
   // Use main stylesheet for visual editor
   // To add custom styles edit /assets/styles/layouts/_tinymce.scss
@@ -106,5 +106,7 @@ function assets() {
   }
 
   wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
+  wp_enqueue_script('sage/backstretch_js', Assets\asset_path('scripts/backstretch.js'), ['sage/js'], null, true);
+
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
